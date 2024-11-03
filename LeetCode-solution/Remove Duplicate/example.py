@@ -10,3 +10,11 @@ class Solution:
         continue
     
     return j
+
+arr = [0,0,1,1,2]
+
+unique_element=Solution().remove_duplicate(arr)
+print(f"il y a {unique_element} élément unique:")
+
+for i in range(unique_element):
+  print(arr[i],end=" ")
