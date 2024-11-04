@@ -1,6 +1,26 @@
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
-Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+##Steps of the Algorithm
+Initialization of the Index:
+
+You start by defining an index j which is initialized to 1. This index will represent the position of the first unique element in the array.
+Linear Traversal of the Array:
+
+You iterate through the array starting from the second element (index 1). This means you compare each element to the previous element.
+Difference Test:
+
+For each element arr[i] (where i is the current index), you check if it is different from the previous element arr[i-1].
+If arr[i] is different from arr[i-1], it indicates that you have found a new unique element.
+Updating the Unique Element:
+
+In this case, you copy arr[i] to the position j and increment j by 1. This means you have recorded this unique element at the end of the list of unique elements.
+Continue the Iteration:
+
+If arr[i] is identical to arr[i-1], you simply continue the iteration without doing anything.
+Final Result:
+
+At the end of the loop, all unique elements will be in the first positions of the array up to the index j - 1. The rest of the array may contain elements that you do not want (the duplicates), but this does not affect the validity of the list of unique elements.
+
 
 Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 Return k.
