@@ -1,20 +1,26 @@
-class Solution:
+class Exercise:
   def remove_duplicate(self,array):
-    l = len(array)
-    j= 1 #index du premier élément unique
+    l = len(array) #lenght of the array 
+    j = 1 #index of the second element 
+    
     for i in range(1,l):
       if array[i] != array[i-1]:
-        array[j]=array[i]
-        j+=1 
-      else:
-        continue
-    
-    return j
+        array[j] = array[i]
+        j += 1 
+        
+    return j # return the number of the element  
+     
+ex = Exercise()
+arr = [1,1,2,2,3,4,5]
+remove_arr = []
 
-arr = [0,0,1,1,2]
+elem = ex.remove_duplicate(arr)
+print(elem) #display the number of uniqu element
 
-unique_element=Solution().remove_duplicate(arr)
-print(f"il y a {unique_element} élément unique:")
+for i in range(elem):
+  remove_arr.append(arr[i])
+  
+print(remove_arr)
 
-for i in range(unique_element):
-  print(arr[i],end=" ")
+
+
