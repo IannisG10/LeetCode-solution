@@ -8,13 +8,3 @@ class Solution:
 
     nums1.sort()
 
-array1 = [1,2,3,4,0,0]
-array2 = [2,4,5,6]
-
-m = len(array1)
-n = len(array2)
-
-Solution().mergeArray(array1,array2,m,n)
-print(array1)
-      
-    
