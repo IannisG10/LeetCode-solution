@@ -1,10 +1,7 @@
-class TreeNode:
-  # constructor of the Node
-  def __init__(self,value):
-    self.value = value
-    self.left = left
-    self.right = right
-
-class insertIntoBST:
-  def arrayToBST(self,array):
-    
+class TreeNode(object):
+    def __init__(self,val):
+        self.val = val
+        self.left = None
+        self.right = None
+class Solution(object):
+    def sortedArrayToBST(self, nums):
